@@ -1,0 +1,20 @@
+{
+  "name": "instant-message",
+  "version": "1.0.0",
+  "description": "Simple instant message application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "docker-build": "docker image build -t instant-message .",
+    "docker-start": "docker container run -p 3080:3000 --name im instant-message",
+    "enter-container": "docker exec -it im /bin/bash",
+    "docker-stop": "docker container rm --force im"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
